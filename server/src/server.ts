@@ -10,7 +10,22 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+// Allow both local dev and the deployed Vercel frontend
+const allowedOrigins = [
+    'http://localhost:3000',
+    process.env.ALLOWED_ORIGIN || 'http://localhost:3000',
+];
+
+app.use(cors({
+    origin: (origin, callback) => {
+        // Allow requests with no origin (Postman, curl, server-to-server)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.includes(origin)) return callback(null, true);
+        callback(new Error(`CORS blocked: ${origin}`));
+    },
+    credentials: true,
+}));
+
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI!)
