@@ -12,7 +12,6 @@ const app = express();
 
 // Allow both local dev and the deployed Vercel frontend
 const allowedOrigins = [
-    'http://localhost:3000',
     process.env.ALLOWED_ORIGIN || 'http://localhost:3000',
 ];
 

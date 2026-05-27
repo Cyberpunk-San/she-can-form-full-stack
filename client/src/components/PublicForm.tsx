@@ -429,7 +429,7 @@ const PublicForm: React.FC<PublicFormProps> = ({ onAdminClick }) => {
           
           <div className="flex items-center gap-3">
             <a 
-              href="https://www.instagram.com/_shecanfoundation_" 
+              href="https://www.instagram.com/shecanfoundation.ngo" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="p-2 border border-indie-dark/15 hover:border-indie-dark bg-white hover:bg-indie-bg transition-all duration-200 text-neutral-600 hover:text-indie-dark"
