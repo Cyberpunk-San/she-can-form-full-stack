@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.font-script-indie {
+  font-family: 'Caveat', cursive;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #faf6ef;
+    color: #28231d;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-serif-indie {
+  font-family: 'Fraunces', serif;
+}
+
+.font-mono-indie {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Indie Neo-brutalism offset shadow utility */
+.indie-shadow {
+  box-shadow: 4px 4px 0px 0px #28231d;
+}
+
+.indie-shadow-lg {
+  box-shadow: 8px 8px 0px 0px #28231d;
+}
+
+.indie-shadow-sm {
+  box-shadow: 2px 2px 0px 0px #28231d;
+}
+
+.indie-shadow-active:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #28231d;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle retro dotted paper grid pattern */
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(40, 35, 29, 0.09) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
